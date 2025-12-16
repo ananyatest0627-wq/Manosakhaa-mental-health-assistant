@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Assistant - मानसिक स्वास्थ्य सहायक</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Selection Screen -->
+    <div class="language-screen" id="languageScreen">
+        <div class="language-container">
+            <div class="brain-icon-large">🧠</div>
+            <h1>Mental Health Assistant (Manosakha)</h1>
+            <h2>मानसिक स्वास्थ्य सहायक (मनोसखा)</h2>
+            <p class="language-subtitle">Please select your preferred language<br>कृपया अपनी पसंदीदा भाषा चुनें</p>
+            
+            <div class="language-buttons">
+                <button class="language-btn" onclick="selectLanguage('en')">
+                    <span class="lang-flag">🇬🇧</span>
+                    <span class="lang-name">English</span>
+                </button>
+                <button class="language-btn" onclick="selectLanguage('hi')">
+                    <span class="lang-flag">🇮🇳</span>
+                    <span class="lang-name">हिन्दी (Hindi)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Chat Interface -->
+    <div class="container" id="mainContainer" style="display: none;">
+        <div class="chat-wrapper">
+            <!-- Header -->
+            <div class="header">
+                <div class="brain-icon">🧠</div>
+                <h1 id="headerTitle">Mental Health Assistant</h1>
+                <p class="subtitle" id="headerSubtitle">Answer a few questions to assess your mental wellbeing</p>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">Question 1 of 5</span>
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-area" id="chatArea">
+                <!-- Messages will be added here dynamically -->
+            </div>
+
+            <!-- Input Area (for typing responses) -->
+            <div class="input-area" id="inputArea" style="display: none;">
+                <input type="text" id="userInput" placeholder="Type your response here...">
+                <button id="sendBtn">Send</button>
+            </div>
+
+            <!-- Options Area (for button choices) -->
+            <div class="options-area" id="optionsArea">
+                <!-- Option buttons will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
